@@ -8,9 +8,9 @@
 #define RELE 4 //GPIO4
 
 const char* SSID     = "FASTWEB-933GSH";
-  const char* PASSWORD = "7LTSA734QL";
+const char* PASSWORD = "7LTSA734QL";
 
-const String BOT_TOKEN = "7438813077:AAGwY-tF999VeNpQvzoBuG4vNI9TTSgx-KU";
+const String BOT_TOKEN = "7962964299:AAGBX6DwRqBwKO-c4-XXrNa9b4e8clbwdrQ";
 const String CHAT_ID = "630371873";
 
 const char* info =
