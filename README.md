@@ -7,14 +7,18 @@ Controllo remoto dell’irrigazione e lettura sensori tramite Telegram
 
 Questo progetto permette di controllare un impianto di irrigazione tramite ESP32 e un Telegram Bot, con la possibilità di:
 
-avviare l’irrigazione per un numero di secondi desiderato
+-avviare l’irrigazione per un numero di secondi desiderato
+-richiedere dati in tempo reale dall’Arduino (tramite canale Serial2)
+-leggere istantaneamente sensori di temperatura e umidità 
 
-richiedere dati in tempo reale dall’Arduino (tramite Serial2)
+Il sistema usa un relè a 5V per controllare la pompa d'acqua e un microcontrollore Arduino Uno Mini per la lettura dei sensori.
 
-leggere sensori istantaneamente
+Dettaglio del progetto
 
-monitorare la connessione e garantire stabilità (watchdog Telegram + WiFi)
+Il progetto prevede di poter controllare e gestire l'azionamento di una pompa d'acqua per l'irrigazione delle piante.
 
-evitare blocchi, duplicazioni di messaggi e problemi TLS
+La pompa elettrica, grazie a un cavo USB, controllato da un modulo relé a 5V con isolamento galvanico, è alimentata da un alimentatore per PC che si interfaccia con la rete elettrica.
 
-Il sistema usa un relay per controllare l’elettrovalvola e un Arduino secondario per la lettura sensori.
+Il modulo relè è pilotato dal GPIO4 della scheda di sviluppo "IdeaSpark ESP32" e alimentato da un modulo Power Supply con uscite a 5V e 3.3 V.
+L'ESP32, invece, è alimentato tramite un regolatore di tensione a 3.3 V e controlla un bot Telegram (lettura e scrittura messaggi). 
+L'utente può controllare e monitorare l'irrigazione e leggere i dati dei sensori tramite il bot. Quando riceve un messaggio, l'ESP32 lo riceve ed esegue le istruzioni in base al comando lanciato. Nel caso di richiesta di dati dai sensori DHT dell'aria o dei sensori di umidità del terreno, l'ESP32 comunica tramite un canale di comunicazione seriale a un microcontrollore Arduino Uno Mini, che si occupa di leggere i dati dei sensori e inoltrarli al modulo ESP. L'Arduino, inoltre, si occupa di mostrare su un display LCD i valori correnti di temperatura e umidità dell'aria. Il modulo Arduino riesce a controllare e ad alimentare fino a tre sensori di umidità capacitivi, il sensore DHT e lo schermo LCD.
