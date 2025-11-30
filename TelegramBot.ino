@@ -1,17 +1,17 @@
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <UniversalTelegramBot.h>
+#include <MyLogin.h>
 
 #define RX 16
 #define TX 17
+#define RELE 4 // GPIO4
 
-#define RELE 4 //GPIO4
+const char* SSID     = MY_SSID;
+const char* PASSWORD = MY_PASSWORD;
 
-const char* SSID     = "FASTWEB-933GSH";
-const char* PASSWORD = "7LTSA734QL";
-
-const String BOT_TOKEN = "7962964299:AAGBX6DwRqBwKO-c4-XXrNa9b4e8clbwdrQ";
-const String CHAT_ID = "630371873";
+const String BOT_TOKEN = BOT_TOKEN_IRRIGATOR;
+const String CHAT_ID = CHAT_ID_BOT_IRRIGATOR;
 
 const char* info =
   "Commands:\n\n"
