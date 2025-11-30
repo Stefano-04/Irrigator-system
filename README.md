@@ -21,4 +21,9 @@ La pompa elettrica, grazie a un cavo USB, controllato da un modulo relé a 5V co
 
 Il modulo relè è pilotato dal GPIO4 della scheda di sviluppo "IdeaSpark ESP32" e alimentato da un modulo Power Supply con uscite a 5V e 3.3 V.
 L'ESP32, invece, è alimentato tramite un regolatore di tensione a 3.3 V e controlla un bot Telegram (lettura e scrittura messaggi). 
-L'utente può controllare e monitorare l'irrigazione e leggere i dati dei sensori tramite il bot. Quando riceve un messaggio, l'ESP32 lo riceve ed esegue le istruzioni in base al comando lanciato. Nel caso di richiesta di dati dai sensori DHT dell'aria o dei sensori di umidità del terreno, l'ESP32 comunica tramite un canale di comunicazione seriale a un microcontrollore Arduino Uno Mini, che si occupa di leggere i dati dei sensori e inoltrarli al modulo ESP. L'Arduino, inoltre, si occupa di mostrare su un display LCD i valori correnti di temperatura e umidità dell'aria. Il modulo Arduino riesce a controllare e ad alimentare fino a tre sensori di umidità capacitivi, il sensore DHT e lo schermo LCD.
+
+L'utente può controllare e monitorare l'irrigazione e leggere i dati dei sensori tramite il bot. Quando riceve un messaggio, l'ESP32 lo riceve ed esegue le istruzioni in base al comando lanciato. 
+Nel caso di richiesta di dati dai sensori DHT dell'aria o dei sensori di umidità del terreno, l'ESP32 comunica tramite un canale di comunicazione seriale a un microcontrollore Arduino Uno Mini, che si occupa di leggere i dati dei sensori e inoltrarli al modulo ESP. 
+
+L'Arduino, inoltre, si occupa di mostrare su un display LCD i valori correnti di temperatura e umidità dell'aria. 
+Il modulo Arduino riesce a controllare e ad alimentare fino a tre sensori di umidità capacitivi, il sensore DHT e lo schermo LCD.
