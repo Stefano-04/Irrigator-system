@@ -45,6 +45,10 @@ Il modulo Arduino riesce a controllare e ad alimentare fino a tre sensori di umi
 - Potenziometro (contrasto schermo LCD)
 - scheda Arduino UNO Mini
 - scheda IdeaSpark ESP32
+
+  
  **Consigli**
   Si consiglia di rivestire bene la parte elettronica del sensore Capacitivo in quanto potrebbe arruginirsi restando a contatto con l'acqua.
+
+  Per poter riutilizzare il codice è necessario scrivere un file "Login.h" da inserire nella stessa cartella del progetto, dove scrivere SSID e PASSWORD della propria rete fissa.
 
