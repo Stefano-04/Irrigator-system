@@ -36,7 +36,7 @@ Nel caso di richiesta di dati dai sensori DHT dell'aria o dei sensori di umidit�
 Come funzione aggiuntiva, l'Arduino mostra su un display LCD i valori correnti di temperatura e umidità dell'aria (DHT). 
 Il modulo Arduino riesce a controllare e ad alimentare fino a tre sensori di umidità capacitivi, il sensore DHT e lo schermo LCD.
 
-Componenti utilizzati
+**Componenti utilizzati**
 - 3 Capacitive soil moisture sensor
 - Sensore temperatura DHT11
 - Relé a 5V
@@ -45,5 +45,6 @@ Componenti utilizzati
 - Potenziometro (contrasto schermo LCD)
 - scheda Arduino UNO Mini
 - scheda IdeaSpark ESP32
-
+ **Consigli**
+  Si consiglia di rivestire bene la parte elettronica del sensore Capacitivo in quanto potrebbe arruginirsi restando a contatto con l'acqua.
 
